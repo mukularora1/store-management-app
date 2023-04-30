@@ -1,0 +1,10 @@
+.manageStore {
+    width: 100%;
+}
+.manageStore__heading {
+    display: flex;
+    width: 100%;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    align-items: center;
+}
