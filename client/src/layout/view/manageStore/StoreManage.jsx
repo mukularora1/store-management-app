@@ -8,6 +8,7 @@ import AddInventory from './AddInventory';
 import InventoryDetailTable from './InventoryDetailTable';
 import './storeManage.css';
 function StoreManage() {
+    console.log('here');
     const fileInputRef = useRef(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [csvData, setCsvData] = useState([]);
