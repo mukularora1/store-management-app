@@ -1,4 +1,4 @@
-import Dashboard from '../layout/view/Dashboard';
+import Dashboard from '../layout/view/Dashboard/Dashboard';
 import StoreManage from '../layout/view/manageStore/StoreManage';
 
 const AdminRoutes = [
