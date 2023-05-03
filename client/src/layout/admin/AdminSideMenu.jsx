@@ -1,5 +1,6 @@
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
+import PaletteIcon from '@mui/icons-material/Palette';
 import StoreIcon from '@mui/icons-material/Store';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
@@ -51,6 +52,12 @@ function AdminSideMenu() {
             icon: <DashboardIcon />,
             method: handleOnClick,
             link: '/admin/purchase',
+        },
+        {
+            title: 'Bill design',
+            icon: <PaletteIcon />,
+            method: handleOnClick,
+            link: '/admin/bill-design-setup',
         },
     ];
     return (
