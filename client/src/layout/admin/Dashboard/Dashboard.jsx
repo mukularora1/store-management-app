@@ -46,7 +46,8 @@ function Dashboard() {
                 style={{
                     display: 'flex',
                     flexWrap: 'wrap',
-                    justifyContent: 'space-around',
+                    justifyContent: 'space-between',
+                    padding: 25,
                 }}>
                 {dashboardInfoArr.map(
                     ({ heading, icon, amount, isIncrease, percentage }) => {
