@@ -163,7 +163,7 @@ export default function Header() {
                             display: { xs: 'none', sm: 'block' },
                             padding: '0 35px',
                         }}>
-                        Bill generator
+                        Store Management
                     </Typography>
                     <Box sx={{ flexGrow: 1 }} />
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>

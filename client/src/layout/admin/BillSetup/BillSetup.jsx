@@ -19,10 +19,18 @@ function BillSetup() {
                 </h1>
             </div>
             <Grid container spacing={2}>
-                <Grid item xs={6} md={6} sx={{ border: '2px solid black' }}>
+                <Grid item xs={6} md={6}>
                     <BillSetting />
                 </Grid>
-                <Grid item xs={6} md={6} sx={{ border: '2px solid black' }}>
+                <Grid
+                    item
+                    xs={6}
+                    md={6}
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        flexDirection: 'column',
+                    }}>
                     <BillView />
                 </Grid>
             </Grid>
