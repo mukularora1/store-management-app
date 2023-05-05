@@ -1,4 +1,4 @@
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import TrendingDownIcon from '@mui/icons-material/TrendingDown';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -8,7 +8,13 @@ import CardContent from '@mui/material/CardContent';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import React from 'react';
-function DashboardInfoCard({ heading, icon, amount, isIncrease, percentage }) {
+function DashboardInfoCard({
+    heading,
+    dashboardIcon,
+    amount,
+    isIncrease,
+    percentage,
+}) {
     return (
         <Box sx={{ width: 300 }}>
             <Card variant='outlined'>
@@ -25,13 +31,13 @@ function DashboardInfoCard({ heading, icon, amount, isIncrease, percentage }) {
                         <Typography
                             sx={{ fontSize: 20, color: 'blue' }}
                             component='span'>
-                            Sales
+                            {heading}
                         </Typography>
                         <IconButton
                             size='large'
                             aria-label='show 4 new mails'
                             color='inherit'>
-                            <AttachMoneyIcon sx={{ color: 'blue' }} />
+                            {dashboardIcon}
                         </IconButton>
                     </Box>
                     <Box
@@ -44,7 +50,7 @@ function DashboardInfoCard({ heading, icon, amount, isIncrease, percentage }) {
                             margin: '25px 0',
                         }}>
                         <Typography sx={{ fontSize: 36, fontWeight: 500 }}>
-                            5000
+                            {amount}
                         </Typography>
                     </Box>
 
@@ -57,13 +63,17 @@ function DashboardInfoCard({ heading, icon, amount, isIncrease, percentage }) {
                             size='large'
                             aria-label='show 4 new mails'
                             color='text.secondary'>
-                            <TrendingUpIcon />
+                            {isIncrease ? (
+                                <TrendingUpIcon />
+                            ) : (
+                                <TrendingDownIcon />
+                            )}
                         </IconButton>
                         <Typography
                             sx={{ fontSize: 14, margin: '0 10px' }}
                             component='span'
                             color='text.secondary'>
-                            17 %
+                            {percentage}
                         </Typography>
                         <Typography
                             sx={{ fontSize: 14 }}

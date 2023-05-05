@@ -1,6 +1,7 @@
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import PaletteIcon from '@mui/icons-material/Palette';
+import SettingsIcon from '@mui/icons-material/Settings';
 import StoreIcon from '@mui/icons-material/Store';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
@@ -10,13 +11,16 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Toolbar from '@mui/material/Toolbar';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 
 function AdminSideMenu() {
     const [selectedIndex, setSelectedIndex] = useState(0);
+    useEffect(() => {
+        setSelectedIndex(0);
+    }, [selectedIndex]);
     const handleListItemClick = (event, index, method) => {
         console.log(event, index);
         setSelectedIndex(index);
@@ -58,6 +62,12 @@ function AdminSideMenu() {
             icon: <PaletteIcon />,
             method: handleOnClick,
             link: '/admin/bill-design-setup',
+        },
+        {
+            title: 'Store setting',
+            icon: <SettingsIcon />,
+            method: handleOnClick,
+            link: '/admin/store-setting',
         },
     ];
     return (
